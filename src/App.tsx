@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <MainContent orderData={orderData} handleCard={handleCard} data={data} />
+      <MainContent handleCard={handleCard} data={data} />
     </div>
   );
 };

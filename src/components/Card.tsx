@@ -31,7 +31,6 @@ const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
             onChange={handleChange}
             type="number"
             value={qV}
-            defaultValue={1}
             min={1}
             max={extraInfo.quantity}
           />
