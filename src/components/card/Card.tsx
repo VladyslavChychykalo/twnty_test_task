@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Card.module.css";
-import useInputNumber from "../hooks/useInputNumber";
-import solarImage from "../assets/solar.jpg";
+import useInputNumber from "../../hooks/useInputNumber";
+import solarImage from "../../assets/solar.jpg";
 
 interface IProps {
   title: string;

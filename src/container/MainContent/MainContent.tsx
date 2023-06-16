@@ -1,6 +1,6 @@
 import React from "react";
 import { DataItemI } from "../../interfaces/interfaces";
-import Card from "../../components/Card";
+import Card from "../../components/card/Card";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./MainContent.module.css";
 
