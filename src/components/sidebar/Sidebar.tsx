@@ -44,8 +44,8 @@ const Sidebar: React.FC = () => {
                 <img src={solarImage} alt="Solar" />
                 <h2>{title}</h2>
                 <p>Choosen quantity: {quantity}</p>
-                <p>Price for one item {price}</p>
-                {quantity > 1 && <p>Common Price {quantity * price}</p>}
+                <p>Price for one item: {price}</p>
+                {quantity > 1 && <p>Common Price: {quantity * price}</p>}
               </li>
             );
           })}
