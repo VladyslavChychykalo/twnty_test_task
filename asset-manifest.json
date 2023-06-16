@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/twnty_test_task/static/css/main.10f73a05.css",
+    "main.js": "/twnty_test_task/static/js/main.0fe9ba66.js",
+    "static/media/solar.jpg": "/twnty_test_task/static/media/solar.6ff43bb47d813fa36976.jpg",
+    "index.html": "/twnty_test_task/index.html",
+    "main.10f73a05.css.map": "/twnty_test_task/static/css/main.10f73a05.css.map",
+    "main.0fe9ba66.js.map": "/twnty_test_task/static/js/main.0fe9ba66.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10f73a05.css",
+    "static/js/main.0fe9ba66.js"
+  ]
+}
