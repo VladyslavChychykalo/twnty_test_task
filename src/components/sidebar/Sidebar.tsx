@@ -1,14 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Drawer from "@mui/material/Drawer";
+import SidebarCard from "./SidebarCard/SidebarCard";
 import { RootState } from "../../redux/store";
 import styles from "./Sidebar.module.css";
 import { OrderDataI } from "../../interfaces/interfaces";
-import solarImage from "../../assets/solar.jpg";
-
-// interface IProps {
-//   orderData: OrderDataI[];
-// }
 
 const Sidebar: React.FC = () => {
   const orderData: OrderDataI[] = useSelector(
@@ -40,13 +36,12 @@ const Sidebar: React.FC = () => {
           {orderData.map((el: OrderDataI) => {
             const { title, quantity, price } = el;
             return (
-              <li key={title}>
-                <img src={solarImage} alt="Solar" />
-                <h2>{title}</h2>
-                <p>Choosen quantity: {quantity}</p>
-                <p>Price for one item: {price}</p>
-                {quantity > 1 && <p>Common Price: {quantity * price}</p>}
-              </li>
+              <SidebarCard
+                key={title}
+                title={title}
+                quantity={quantity}
+                price={price}
+              />
             );
           })}
         </ul>

@@ -45,6 +45,7 @@ const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
             title,
             price: extraInfo.price,
             quantity: Number(qV),
+            maxQuantity: extraInfo.quantity,
           };
           handleCard(newCart);
         }}
