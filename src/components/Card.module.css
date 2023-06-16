@@ -3,20 +3,43 @@
   flex-direction: column;
 }
 
+.cardInfo > p {
+  margin-bottom: 5px;
+}
+
 .card button {
-  margin-top: 15px;
+  margin-top: 10px;
   cursor: pointer;
+  background-color: #42a5f5;
+  color: #fff;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .qWrapper {
-  margin-top: 10px;
   display: flex;
 }
 
 .qWrapper p {
+  display: flex;
+  align-items: center;
   margin-right: 5px;
+  font-size: 10px;
+  white-space: nowrap;
 }
 
 .qWrapper input {
   width: 100%;
+}
+
+.additionalText {
+  color: red;
+  display: block;
+  font-size: 7px;
+  line-height: 10px;
+  margin-top: 10px;
 }

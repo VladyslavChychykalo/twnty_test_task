@@ -22,11 +22,11 @@ const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
     <li className={styles.card}>
       <img src={solarImage} alt="Solar" />
       <h2>{title}</h2>
-      <div>
+      <div className={styles.cardInfo}>
         <p>Quantity: {extraInfo.quantity}</p>
         <p>Price: {extraInfo.price}</p>
         <div className={styles.qWrapper}>
-          <p>Choose quantity</p>
+          <p>Choose quantity:</p>
           <input
             onChange={handleChange}
             type="number"
@@ -35,6 +35,9 @@ const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
             max={extraInfo.quantity}
           />
         </div>
+        <p className={styles.additionalText}>
+          *You can`t add to the order quantity more than you have.
+        </p>
       </div>
       <button
         onClick={() => {
