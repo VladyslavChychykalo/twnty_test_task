@@ -33,14 +33,15 @@ const App: React.FC = () => {
     if (
       currentOrderEl?.quantity &&
       mainArrEl &&
-      newCart.quantity + currentOrderEl?.quantity > mainArrEl[1]?.quantity
+      Number(newCart.quantity) + Number(currentOrderEl?.quantity) >
+        Number(mainArrEl[1]?.quantity)
     )
       return;
 
     if (orderData.some((el) => el.title === newCart.title)) {
       const mapArr = orderData.map((el) =>
         el.title === newCart.title
-          ? { ...el, quantity: el.quantity + newCart.quantity }
+          ? { ...el, quantity: Number(el.quantity) + Number(newCart.quantity) }
           : el
       );
       return dispatch(addOrderQuantity(mapArr));

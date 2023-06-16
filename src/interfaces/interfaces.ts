@@ -6,4 +6,5 @@ export interface OrderDataI {
   title: string;
   price: number;
   quantity: number;
+  maxQuantity: number;
 }

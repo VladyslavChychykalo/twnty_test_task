@@ -34,13 +34,14 @@ const Sidebar: React.FC = () => {
         <p>Total price: {totalPrice}</p>
         <ul>
           {orderData.map((el: OrderDataI) => {
-            const { title, quantity, price } = el;
+            const { title, quantity, price, maxQuantity } = el;
             return (
               <SidebarCard
                 key={title}
                 title={title}
                 quantity={quantity}
                 price={price}
+                maxQuantity={maxQuantity}
               />
             );
           })}

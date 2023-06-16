@@ -11,3 +11,7 @@
 .sidebarWrapper ul li {
   margin-top: 15px;
 }
+
+.sidebarWrapper ul li input {
+  width: 20%;
+}

@@ -13,9 +13,10 @@ interface IProps {
 
 const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
   const [qV, setQV] = useState(1);
-  const handleChange = ({ target }: any) => {
-    if (target.value > extraInfo.quantity) return;
-    setQV(target.value);
+  
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    if (Number(target.value) > Number(extraInfo.quantity)) return;
+    setQV(Number(target.value));
   };
 
   return (
