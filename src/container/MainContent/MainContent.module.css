@@ -1,0 +1,10 @@
+.mainContentWrapper {
+  display: flex;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 50px;
+}

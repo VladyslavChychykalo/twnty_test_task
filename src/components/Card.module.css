@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card button {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.qWrapper {
+  margin-top: 10px;
+  display: flex;
+}
+
+.qWrapper p {
+  margin-right: 5px;
+}
+
+.qWrapper input {
+  width: 100%;
+}

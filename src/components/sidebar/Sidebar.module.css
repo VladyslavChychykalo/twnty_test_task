@@ -1,0 +1,13 @@
+.sidebarWrapper {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+.sidebarWrapper ul {
+  margin-top: 30px;
+}
+
+.sidebarWrapper ul li {
+  margin-top: 15px;
+}
