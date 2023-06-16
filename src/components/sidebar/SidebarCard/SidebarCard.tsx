@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { OrderDataI } from "../../../interfaces/interfaces";
 import { RootState } from "../../../redux/store";
 import { addOrderQuantity } from "../../../redux/slice/orders";
+import useInputNumber from "../../../hooks/useInputNumber";
 import solarImage from "../../../assets/solar.jpg";
 
 interface PropsI {
@@ -18,7 +19,10 @@ const SidebarCard: React.FC<PropsI> = ({
   price,
   maxQuantity,
 }) => {
-  const [qV, setQV] = useState(quantity);
+  const { qV, setQV, handleChange }: any = useInputNumber({
+    defaultValue: quantity,
+    maxQuantity,
+  });
   const dispatch = useDispatch();
   const orderData: OrderDataI[] = useSelector(
     (state: RootState) => state.orders
@@ -26,7 +30,7 @@ const SidebarCard: React.FC<PropsI> = ({
 
   useEffect(() => {
     setQV(quantity);
-  }, [quantity]);
+  }, [quantity, setQV]);
 
   useEffect(() => {
     const mapArr = orderData.map((el) =>
@@ -36,11 +40,6 @@ const SidebarCard: React.FC<PropsI> = ({
     dispatch(addOrderQuantity(mapArr));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qV, dispatch, title]);
-
-  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    if (Number(target.value) > Number(maxQuantity)) return;
-    setQV(Number(target.value));
-  };
 
   return (
     <li key={title}>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Card.module.css";
+import useInputNumber from "../hooks/useInputNumber";
 import solarImage from "../assets/solar.jpg";
 
 interface IProps {
@@ -12,12 +13,10 @@ interface IProps {
 }
 
 const Card: React.FC<IProps> = ({ title, extraInfo, handleCard }) => {
-  const [qV, setQV] = useState(1);
-  
-  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    if (Number(target.value) > Number(extraInfo.quantity)) return;
-    setQV(Number(target.value));
-  };
+  const { qV, handleChange }: any = useInputNumber({
+    defaultValue: 1,
+    maxQuantity: extraInfo.quantity,
+  });
 
   return (
     <li className={styles.card}>
